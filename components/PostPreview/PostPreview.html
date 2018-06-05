@@ -1,0 +1,10 @@
+<div>
+  <div class="post-preview">
+    <div :style="{'background-image': 'url(/' + post.meta.thumbnail + ')'}" class="post-preview__thumbnail"></div>
+    <div class="post-preview__meta">
+      <h2>{{ post.meta.title }}</h2>
+      <div class="meta meta__excerpt">{{ post.meta.excerpt }}</div>
+      <div class="meta meta__author">{{ post.meta.author }}</div>
+    </div>
+  </div>
+</div>

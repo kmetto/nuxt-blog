@@ -1,0 +1,7 @@
+<div class="wrapper">
+  <nuxt-link class="posts__link" :to="'posts/' + post.meta.slug"
+    v-for="post in posts"
+    :key="post.slug">
+    <post-preview :post="post"/>
+  </nuxt-link>
+</div>
