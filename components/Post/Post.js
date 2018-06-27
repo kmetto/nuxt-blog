@@ -8,6 +8,6 @@ export default {
     },
     meta() {
       return JSON.parse(this.post.meta);
-    }
-  }
+    },
+  },
 };

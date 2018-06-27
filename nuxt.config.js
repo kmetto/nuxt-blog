@@ -3,7 +3,7 @@ module.exports = {
     vendor: ['axios']
   },
   modules: [
-    'nuxt-babel',
+    'nuxt-babel', //allows to use .babelrc
   ],
   css: [
     'reset-css',
