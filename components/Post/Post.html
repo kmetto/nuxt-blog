@@ -1,7 +1,7 @@
 <div>
   <article class="post">
-    <h1 class="wrapper post__title">{{ post.meta.title }}</h1>
-    <div class="post__thumbnail" v-if="post.meta.thumbnail" :style="{'background-image': 'url(/' + post.meta.thumbnail + ')'}"></div>
+    <h1 class="wrapper post__title">{{ meta.title }}</h1>
+    <div class="post__thumbnail" v-if="meta.thumbnail" :style="{'background-image': 'url(/' + meta.thumbnail + ')'}"></div>
     <div class="wrapper post__content" v-html="content"></div>
   </article>
 </div>

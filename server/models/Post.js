@@ -4,47 +4,28 @@ const path = require('path');
 
 module.exports = class Post {
   constructor(name) {
+    this.postsFolder = config.posts;
     this.name = name;
-    this.markdown = null;
-    this.meta = null;
+    this.markdownFile = `${this.name}.md`;
+    this.metaFile = `${this.name}.json`;
+    this.markdown = this._readMarkdown();
+    this.meta = this._readMeta();
+    this.stats = this._readStats();
   }
 
-  async getMarkdown() {
-    if(this.markdown) {
-      return this.markdown;
-    }
-    const markdown = await this._read(`${this.name}.md`);
-    this.markdown = markdown;
-    return markdown; 
+  _readStats() {
+    return fs.statSync(path.resolve(this.postsFolder, this.markdownFile));
   }
 
-  async getMeta() {
-    if(this.meta) {
-      return this.meta;
-    }
-    const meta = await this._read(`${this.name}.json`);
-    this.meta = JSON.parse(meta);
-    return this.meta;  
+  _readMeta(){
+    return this._read(this.metaFile);
   }
 
-  async getData() {
-    const meta = await this.getMeta();
-    const markdown = await this.getMarkdown();
-
-    return {
-      meta,
-      markdown,
-    }
+  _readMarkdown() {
+    return this._read(this.markdownFile);
   }
 
   _read(file){
-    return new Promise((resolve, reject) => {
-      fs.readFile(path.resolve(config.posts, file), 'utf-8', (err, data) => {
-        if(err) {
-          reject(err)
-        }
-        resolve(data);
-      });
-    });
+    return fs.readFileSync(path.resolve(this.postsFolder, file), 'utf-8');
   }
 }

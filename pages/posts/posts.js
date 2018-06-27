@@ -14,7 +14,8 @@ export default  {
   },
 
   async fetch({ store, params }){
-    const { data } = await await axios.get('/posts');
+    const { data } = await axios.get('/posts');
     store.commit('posts/SET_POSTS', data);
+    store.commit('posts/SET_COUNT', data.length);
   }
 }

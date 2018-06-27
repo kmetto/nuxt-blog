@@ -1,5 +1,9 @@
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas ultricies scelerisque lacus non commodo. Vivamus diam libero, tempor eget facilisis vitae, consectetur sit amet felis. Aliquam lacus mauris, imperdiet aliquam commodo at, condimentum semper ligula. In urna ipsum, tempus at rutrum et, bibendum in elit. Vestibulum lacinia massa turpis, sit amet lobortis velit auctor at. Ut malesuada accumsan orci. Phasellus ac viverra massa. Aliquam nisl velit, fringilla sed libero vel, ultricies congue ipsum. Etiam a pharetra turpis. Quisque id mauris id tortor euismod vestibulum vel vitae risus. Donec elementum auctor erat. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Morbi ut rhoncus justo. Nulla imperdiet sed leo sed finibus. Sed dictum auctor euismod. Quisque semper purus nec nisi maximus mattis.
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
 
 Vestibulum at elementum ex. Morbi libero arcu, sagittis sed facilisis eget, efficitur in justo. Donec aliquet imperdiet turpis, id posuere lorem suscipit bibendum. Fusce eleifend eros vitae efficitur ornare. Sed lacinia magna eu suscipit fringilla. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Proin sollicitudin metus eu nisi blandit, nec faucibus augue elementum. Nam hendrerit laoreet velit eget tempor. Vivamus mauris odio, accumsan sagittis nulla ut, tincidunt consequat sem. Nunc commodo imperdiet mattis. Donec suscipit erat iaculis dui mattis laoreet. Vivamus molestie in diam id ultricies. Duis congue pulvinar ligula sit amet lobortis. Quisque semper ornare molestie. Donec fringilla libero nisl, at finibus enim congue eu.
 

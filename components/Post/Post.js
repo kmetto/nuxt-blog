@@ -5,6 +5,9 @@ export default {
   computed: {
     content() {
       return marked(this.post.markdown);
+    },
+    meta() {
+      return JSON.parse(this.post.meta);
     }
   }
 };

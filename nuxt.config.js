@@ -7,6 +7,8 @@ module.exports = {
   ],
   css: [
     'reset-css',
-    '@/assets/css/main.scss',
+    {
+      src:'@/assets/styles/main.scss', lang: 'sass'
+    },
   ],
 }
