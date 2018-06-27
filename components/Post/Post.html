@@ -1,6 +1,11 @@
 <div>
   <article class="post">
     <h1 class="wrapper post__title">{{ meta.title }}</h1>
+    <div class="wrapper post__meta">
+      <div class="post__date" v-if="meta.author">{{ meta.author }}</div>
+      <div class="post__author">{{ createdDate }}</div>
+      <div class="post__time">{{ timeToRead }}</div>
+    </div>
     <div class="post__thumbnail" v-if="meta.thumbnail" :style="{'background-image': 'url(/' + meta.thumbnail + ')'}"></div>
     <div class="wrapper post__content" v-html="content"></div>
   </article>

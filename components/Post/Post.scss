@@ -13,6 +13,16 @@
     font-size: 8rem;
   }
 
+  &__meta {
+    display: flex;
+    flex-direction: row;
+    font-size: 1.2rem;
+    color: #999;
+    > *:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+
   p {
     margin: 3rem 0;
   }
