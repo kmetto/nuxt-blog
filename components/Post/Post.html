@@ -7,6 +7,6 @@
       <div class="post__time">{{ timeToRead }}</div>
     </div>
     <div class="post__thumbnail" v-if="meta.thumbnail" :style="{'background-image': 'url(/' + meta.thumbnail + ')'}"></div>
-    <div class="wrapper post__content" v-html="content"></div>
+    <div class="wrapper post__content" v-html="content" ref="postContent"></div>
   </article>
 </div>

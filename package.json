@@ -21,6 +21,7 @@
     "nuxt": "^1.4.0",
     "nuxt-babel": "^0.1.2",
     "nuxt-class-component": "^1.2.1",
+    "prismjs": "^1.15.0",
     "reset-css": "^4.0.1",
     "sass-loader": "^7.0.2",
     "vue-property-decorator": "^6.1.0",

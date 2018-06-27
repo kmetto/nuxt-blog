@@ -1,4 +1,5 @@
 import marked from 'marked';
+import Prism from 'prismjs';
 
 export default {
   props: ['post'],
@@ -18,5 +19,8 @@ export default {
       const minsToRead = parseInt(wordsCount / wordsPerMinute, 10);
       return `~${minsToRead} ${minsToRead > 1 ? 'minutes' : 'minute'} to read`;
     },
+  },
+  mounted() {
+    Prism.highlightAll();
   },
 };

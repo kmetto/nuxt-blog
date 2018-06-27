@@ -19,6 +19,7 @@ module.exports = {
   ],
   css: [
     'reset-css',
+    '@/assets/styles/prism.css',
     {
       src: '@/assets/styles/main.scss', lang: 'sass',
     },
