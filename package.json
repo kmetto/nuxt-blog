@@ -6,8 +6,8 @@
   "scripts": {
     "dev": "nuxt",
     "serve": "nodemon ./server/server.js",
-    "lint": "eslint components pages",
-    "lint:fix": "eslint components pages --fix"
+    "lint": "eslint components pages server",
+    "lint:fix": "eslint components pages server --fix"
   },
   "author": "Konstantin Metto <met9127@gmail.com> (https://mettochks.com)",
   "license": "ISC",

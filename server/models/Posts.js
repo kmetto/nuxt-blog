@@ -28,7 +28,7 @@ module.exports = class Posts {
 
   readAllPosts() {
     return new Promise((resolve, reject) => {
-      const postsList = fs.readdir(config.posts, null, (err, files) => {
+      fs.readdir(config.posts, null, (err, files) => {
         if (err) {
           reject(err);
         }
