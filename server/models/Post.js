@@ -1,6 +1,6 @@
-const config = require('../config');
 const fs = require('fs');
 const path = require('path');
+const config = require('../config');
 
 module.exports = class Post {
   constructor(name) {
@@ -8,24 +8,24 @@ module.exports = class Post {
     this.name = name;
     this.markdownFile = `${this.name}.md`;
     this.metaFile = `${this.name}.json`;
-    this.markdown = this._readMarkdown();
-    this.meta = this._readMeta();
-    this.stats = this._readStats();
+    this.markdown = this.readMarkdown();
+    this.meta = this.readMeta();
+    this.stats = this.readStats();
   }
 
-  _readStats() {
+  readStats() {
     return fs.statSync(path.resolve(this.postsFolder, this.markdownFile));
   }
 
-  _readMeta(){
-    return this._read(this.metaFile);
+  readMeta() {
+    return this.read(this.metaFile);
   }
 
-  _readMarkdown() {
-    return this._read(this.markdownFile);
+  readMarkdown() {
+    return this.read(this.markdownFile);
   }
 
-  _read(file){
+  read(file) {
     return fs.readFileSync(path.resolve(this.postsFolder, file), 'utf-8');
   }
-}
+};

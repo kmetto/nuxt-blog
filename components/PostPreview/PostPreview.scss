@@ -5,6 +5,10 @@
   flex-direction: row;
   color: #000;
 
+  &:first-child {
+    padding: 3rem 1rem 1rem;
+  }
+
   &__thumbnail {
     width: 30%;
     height: 200px;
@@ -12,7 +16,37 @@
     background-size: cover;
   }
 
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
   &__meta {
-    padding: 0 0 0 1rem;
+    padding: 0 0 0 2rem;
+    color: #999;
+    font-size: 1.2rem;
+    display: flex;
+    flex-direction: row;
+    > *:not(:first-child) {
+      margin-left: 2rem;
+    }
+  }
+
+  &__head {
+    padding: 0 0 0 2rem;
+  }
+
+  &__title {
+    margin-bottom: 1rem;
+    font-size: 3rem;
+  }
+
+  &__link:hover {
+    .post-preview__title {
+      transition: .3s;
+      margin-left: .5rem;
+      text-decoration: underline;
+    }
   }
 }

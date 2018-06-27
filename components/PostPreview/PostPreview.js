@@ -7,5 +7,8 @@ export default {
     url() {
       return `posts/${this.meta.slug}`;
     },
+    createdDate() {
+      return new Date(this.post.stats.birthtimeMs).toDateString();
+    },
   },
 };

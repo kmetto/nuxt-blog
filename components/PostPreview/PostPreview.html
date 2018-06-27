@@ -1,11 +1,16 @@
 <div>
-  <nuxt-link class="posts__link" :to="url">
+  <nuxt-link class="posts__link post-preview__link" :to="url">
     <div class="post-preview">
       <div :style="{'background-image': 'url(/' + meta.thumbnail + ')'}" class="post-preview__thumbnail"></div>
-      <div class="post-preview__meta">
-        <h2>{{ meta.title }}</h2>
-        <div class="meta meta__excerpt">{{ meta.excerpt }}</div>
-        <div class="meta meta__author">{{ meta.author }}</div>
+      <div class="post-preview__info">
+        <div class="post-preview__head">
+          <h2 class="post-preview__title">{{ meta.title }}</h2>
+          <div class="post-preview__excerpt">{{ meta.excerpt }}</div>
+        </div>
+        <div class="post-preview__meta">
+          <div class="meta meta__author">{{ meta.author }}</div>
+          <div class="meta meta__date">{{ createdDate }}</div>
+        </div>
       </div>
     </div>
   </nuxt-link>
